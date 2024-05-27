@@ -1,14 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'users/new'
-  if Rails.env.development?
-    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
-  end
-  post "/graphql", to: "graphql#execute"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  root "application#goodbye"
-
+  root 'home#index'
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create' # 追加
+  resources :users, only: [:create]
+  resources :animes, only: [:index]
 end
