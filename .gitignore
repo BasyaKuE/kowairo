@@ -64,3 +64,4 @@ coverage/
 # Next.js specific files (If using Next.js)
 .next/
 out/
+db/development.sqlite3

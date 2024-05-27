@@ -50,14 +50,6 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'rails-controller-testing'
-gem 'rubocop'
-gem 'rubocop-ast'
-gem 'rubocop-performance'
-gem 'rubocop-rails'
-gem 'rubocop-rake'
-gem 'rubocop-rspec'
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -88,4 +80,12 @@ end
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'rails-controller-testing'
+  gem 'rubocop'
+  gem 'rubocop-ast'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rake'
+  gem 'rubocop-rspec'
+  gem 'erb_lint'
 end
