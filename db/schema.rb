@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_27_114405) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_01_113150) do
   create_table "anime_voice_actors", force: :cascade do |t|
     t.integer "anime_id", null: false
     t.integer "voice_actor_id", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_27_114405) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   create_table "voice_actors", force: :cascade do |t|

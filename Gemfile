@@ -78,14 +78,14 @@ group :development do
 end
 
 group :development, :test do
+  gem 'erb_lint'
   gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 5.0.0'
   gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop'
   gem 'rubocop-ast'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
-  gem 'erb_lint'
 end
