@@ -1,6 +1,0 @@
-<h1>Anime List</h1>
-<ul>
-  <% @animes.each do |anime| %>
-    <li><%= anime.title %> - Priority: <%= anime.user_animes.find_by(user: @user).priority %></li>
-  <% end %>
-</ul>
