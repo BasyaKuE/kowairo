@@ -1,0 +1,24 @@
+# backendがGoで, frontがReactの場合
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/go/src/app
+    environment:
+      - PORT=8080
+    command: go run main.go
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - PORT=3000
+    command: npm start
+
